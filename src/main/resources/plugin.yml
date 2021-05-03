@@ -1,0 +1,7 @@
+name: Light
+description: Place invisible light
+version: ${project.version}
+main: com.jaoafa.light.Main
+api-version: 1.16
+depend: [ LightAPI, WorldEdit ]
+author: mine_book000
