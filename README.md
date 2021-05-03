@@ -10,7 +10,7 @@ The following plugins need to be introduced together.
 
 ## Download
 
-[Releases](https://github.com/jaoafa/Light)
+[Releases](https://github.com/jaoafa/Light/releases)
 
 ## License
 
