@@ -56,9 +56,9 @@ public final class Main extends JavaPlugin {
                     World selectionWorld = we.getSession(player).getSelectionWorld();
                     Region region = we.getSession(player).getSelection(selectionWorld);
                     int changed = 0;
-                    for (int x = region.getMinimumPoint().getBlockX(); x < region.getMaximumPoint().getBlockX(); x++) {
-                        for (int y = region.getMinimumPoint().getBlockY(); y < region.getMaximumPoint().getBlockY(); y++) {
-                            for (int z = region.getMinimumPoint().getBlockZ(); z < region.getMaximumPoint().getBlockZ(); z++) {
+                    for (int x = region.getMinimumPoint().getBlockX(); x <= region.getMaximumPoint().getBlockX(); x++) {
+                        for (int y = region.getMinimumPoint().getBlockY(); y <= region.getMaximumPoint().getBlockY(); y++) {
+                            for (int z = region.getMinimumPoint().getBlockZ(); z <= region.getMaximumPoint().getBlockZ(); z++) {
                                 Location loc = new Location(player.getWorld(), x, y, z);
                                 LightAPI.createLight(loc, LightType.BLOCK, changeTo, true);
                                 for (ChunkInfo info : LightAPI.collectChunks(loc, LightType.BLOCK, changeTo)) {
@@ -97,9 +97,9 @@ public final class Main extends JavaPlugin {
                     World selectionWorld = we.getSession(player).getSelectionWorld();
                     Region region = we.getSession(player).getSelection(selectionWorld);
                     int changed = 0;
-                    for (int x = region.getMinimumPoint().getBlockX(); x < region.getMaximumPoint().getBlockX(); x++) {
-                        for (int y = region.getMinimumPoint().getBlockY(); y < region.getMaximumPoint().getBlockY(); y++) {
-                            for (int z = region.getMinimumPoint().getBlockZ(); z < region.getMaximumPoint().getBlockZ(); z++) {
+                    for (int x = region.getMinimumPoint().getBlockX(); x <= region.getMaximumPoint().getBlockX(); x++) {
+                        for (int y = region.getMinimumPoint().getBlockY(); y <= region.getMaximumPoint().getBlockY(); y++) {
+                            for (int z = region.getMinimumPoint().getBlockZ(); z <= region.getMaximumPoint().getBlockZ(); z++) {
                                 Location loc = new Location(player.getWorld(), x, y, z);
                                 LightAPI.deleteLight(loc, LightType.BLOCK, true);
                                 for (ChunkInfo info : LightAPI.collectChunks(loc, LightType.BLOCK, 15)) {
